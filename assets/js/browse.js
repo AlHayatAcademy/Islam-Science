@@ -82,44 +82,32 @@
     var topicSelect = document.getElementById("essay-topic-filter");
     populateTopicFilter(topicSelect);
 
+    // Deep-link support: topic.html links here with ?topic=N
+    var params = new URLSearchParams(window.location.search);
+    var topicParam = params.get("topic");
+    if (topicParam && topicSelect) topicSelect.value = topicParam;
+
     function render() {
       var topicVal = topicSelect ? topicSelect.value : "all";
       var items = window.ESSAY_QUESTIONS.filter(function (item) {
         return topicVal === "all" || String(item.topic) === String(topicVal);
       });
       list.innerHTML = items.map(function (item) {
-        var pointsHtml = (item.points || []).map(function (p) { return "<li>" + escapeHtml(p) + "</li>"; }).join("");
-        var conceptsHtml = (item.concepts || []).map(function (c) { return '<span class="term-chip">' + escapeHtml(c) + '</span>'; }).join("");
-        var answerId = "exam-answer-" + item.topic;
-        var answerParas = item.examAnswer ? item.examAnswer.split(/\n\n+/).map(function (p) { return "<p>" + escapeHtml(p) + "</p>"; }).join("") : "";
-        var answerHtml = item.examAnswer ? (
-            '<div class="qa-item" style="margin-top:14px;">' +
-              '<button type="button" class="qa-question exam-answer-toggle" aria-expanded="false">' +
-                '<span>مکمل امتحانی جواب پڑھیں (تقریباً ' + (item.examAnswerWordCount || 0) + ' الفاظ)</span>' +
-                '<span class="chevron">⌄</span>' +
-              '</button>' +
-              '<div class="qa-answer" id="' + answerId + '">' + answerParas + '</div>' +
-            '</div>'
-          ) : '';
+        var sectionsHtml = (item.examAnswerSections || []).map(function (sec) {
+          var bodyHtml = (sec.paragraphs || []).map(function (p) {
+            return "<p>" + escapeHtml(p) + "</p>";
+          }).join("");
+          return '<h4 class="exam-answer-heading">' + escapeHtml(sec.heading) + "</h4>" + bodyHtml;
+        }).join("");
         return (
-          '<div class="card" style="margin-bottom:18px;">' +
+          '<div class="card exam-answer-card" id="topic-' + item.topic + '" style="margin-bottom:24px;">' +
             '<span class="topic-badge">موضوع ' + item.topic + '</span>' +
             '<h3>' + escapeHtml(item.question) + '</h3>' +
-            '<p class="small text-muted">جوابی خاکہ کے اہم نکات:</p>' +
-            '<ul>' + pointsHtml + '</ul>' +
-            (conceptsHtml ? ('<div>' + conceptsHtml + '</div>') : '') +
-            '<p class="small" style="margin-top:14px;"><a href="topics/topic-' + pad(item.topic) + '.html">مکمل مطالعہ کریں ←</a></p>' +
-            answerHtml +
+            '<p class="small" style="margin:6px 0 16px;"><a href="topics/topic-' + pad(item.topic) + '.html">مکمل مضمون پڑھیں ←</a></p>' +
+            '<div class="exam-answer-body">' + sectionsHtml + '</div>' +
           '</div>'
         );
       }).join("");
-      list.querySelectorAll(".exam-answer-toggle").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var item = btn.closest(".qa-item");
-          var open = item.classList.toggle("open");
-          btn.setAttribute("aria-expanded", open.toString());
-        });
-      });
     }
     if (topicSelect) topicSelect.addEventListener("change", render);
     render();

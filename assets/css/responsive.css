@@ -15,6 +15,7 @@
 @media (max-width: 900px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .home-menu { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -24,7 +25,9 @@
   .hero p.lead { font-size: 18px; }
   .section { padding: 46px 0; }
   .section-title { font-size: 25px; }
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4, .home-menu { grid-template-columns: 1fr; }
+  .hero-compact h1 { font-size: 29px; }
+  .home-menu-btn { min-height: unset; padding: 20px 18px; }
   .footer-grid { grid-template-columns: 1fr; gap: 22px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .cta-band { flex-direction: column; text-align: center; padding: 28px; }
