@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/islam-science-learning-hub/sitemap.xml
+Sitemap: https://alhayatacademy.github.io/Islam-Science/sitemap.xml
