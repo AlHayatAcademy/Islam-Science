@@ -1,0 +1,53 @@
+/* =========================================================
+   Responsive rules — mobile-first breakpoints
+   Tested at ~320, 375, 768, 1024, 1440px
+   ========================================================= */
+
+/* Desktop nav hidden on small screens, mobile nav + toggle shown */
+@media (max-width: 1024px) {
+  .main-nav { display: none; }
+  .nav-toggle { display: inline-flex; align-items: center; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .topic-layout { grid-template-columns: 1fr; }
+  .topic-toc { position: static; margin-bottom: 24px; }
+}
+
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 17.5px; line-height: 2; }
+  .hero { padding: 54px 0 60px; }
+  .hero h1 { font-size: 34px; }
+  .hero p.lead { font-size: 18px; }
+  .section { padding: 46px 0; }
+  .section-title { font-size: 25px; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cta-band { flex-direction: column; text-align: center; padding: 28px; }
+  .topic-pager { flex-direction: column; }
+  .topic-pager .next { text-align: start; }
+  .article .intro { font-size: 18px; }
+  .article table { font-size: 15px; }
+  blockquote.quran-quote .arabic { font-size: 21px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+  .hero h1 { font-size: 27px; }
+  body { font-size: 16.5px; }
+  .brand-title { font-size: 17px; }
+  .brand img { width: 34px; height: 34px; }
+  .hero-actions .btn, .cta-band .btn { width: 100%; justify-content: center; }
+  .hero-actions { flex-direction: column; }
+  .quiz-shell { padding: 18px; }
+  .quiz-question { font-size: 18px; }
+  .search-box { flex-direction: column; }
+}
+
+/* Prevent any element from causing horizontal overflow on narrow phones */
+img, table, pre, .pathway { max-width: 100%; }
+.container, .header-inner { width: 100%; }

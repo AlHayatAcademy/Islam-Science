@@ -1,0 +1,26 @@
+/* Print-friendly layout */
+@media print {
+  .site-header, .mobile-nav, .nav-toggle, .header-actions,
+  .breadcrumb, .topic-toc, .reading-controls, .topic-pager,
+  .related-topics, .site-footer, .hero-actions, .toolbar,
+  .cta-band, .skip-link, .qa-question .chevron, .print-hide {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 13pt;
+    line-height: 1.8;
+  }
+  .topic-layout { display: block; }
+  .article { max-width: 100%; }
+  .qa-answer { display: block !important; }
+  a { color: #000; text-decoration: underline; }
+  blockquote.quran-quote {
+    border: 1px solid #999;
+    background: #f6f6f6;
+    -webkit-print-color-adjust: exact;
+  }
+  .article table { page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; }
+}

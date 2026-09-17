@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="اسلام اور سائنس لوگو">
+  <circle cx="32" cy="32" r="30" fill="#0f2438"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#b8892f" stroke-width="2"/>
+  <path d="M32 12 L38 26 L53 26 L41 35 L46 50 L32 41 L18 50 L23 35 L11 26 L26 26 Z"
+        fill="none" stroke="#d8ad5c" stroke-width="1.6" stroke-linejoin="round" opacity="0.85"/>
+  <circle cx="32" cy="32" r="9" fill="#12664f"/>
+  <path d="M27 32a5 5 0 1 0 6.5 -6.7 6.2 6.2 0 1 1 -6.5 6.7Z" fill="#faf6ee"/>
+</svg>

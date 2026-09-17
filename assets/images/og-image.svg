@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2438"/>
+      <stop offset="1" stop-color="#081420"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="220" fill="#12664f" opacity="0.18"/>
+  <circle cx="150" cy="520" r="180" fill="#b8892f" opacity="0.14"/>
+  <circle cx="150" cy="300" r="46" fill="#12664f"/>
+  <path d="M133 300a17 17 0 1 0 22 -23 21 21 0 1 1 -22 23Z" fill="#faf6ee"/>
+  <text x="230" y="290" font-family="Georgia, serif" font-size="58" fill="#ffffff" font-weight="bold">Islam &amp; Science</text>
+  <text x="230" y="345" font-family="Georgia, serif" font-size="30" fill="#d8ad5c">Learning Hub</text>
+  <text x="230" y="410" font-family="Georgia, serif" font-size="22" fill="#ece9e2">اسلام اور سائنس — علم، فکر اور حکمت کا منظم مطالعہ</text>
+</svg>

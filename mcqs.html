@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ مشق | اسلام اور سائنس</title>
+<meta name="description" content="اسلام اور سائنس کے تمام موضوعات پر مبنی کثیرالانتخابی سوالات (MCQs) کی مشق — پریکٹس اور امتحان موڈ۔">
+<meta name="keywords" content="MCQs، کوئز، اسلام اور سائنس">
+<link rel="canonical" href="https://example.com/islam-science-learning-hub/mcqs.html">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MCQ مشق | اسلام اور سائنس">
+<meta property="og:description" content="اسلام اور سائنس کے تمام موضوعات پر مبنی کثیرالانتخابی سوالات (MCQs) کی مشق — پریکٹس اور امتحان موڈ۔">
+<meta property="og:image" content="https://example.com/islam-science-learning-hub/assets/images/og-image.svg">
+<meta property="og:locale" content="ur_PK">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+
+</head>
+<body>
+<a href="#main-content" class="skip-link">مرکزی مواد پر جائیں</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.svg" alt="اسلام اور سائنس لوگو">
+      <span class="brand-titles">
+        <span class="brand-title">اسلام اور سائنس</span><br>
+        <span class="brand-sub">Islam &amp; Science Learning Hub</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="مرکزی مینو">
+      <ul>
+        <li><a href="index.html">ہوم</a></li>
+        <li><a href="syllabus.html">نصاب</a></li>
+        <li><a href="topics.html">موضوعات</a></li>
+        <li><a href="mcqs.html">MCQs</a></li>
+        <li><a href="short-questions.html">مختصر سوالات</a></li>
+        <li><a href="essay-questions.html">مقالہ سوالات</a></li>
+        <li><a href="revision.html">دہرائی</a></li>
+        <li><a href="about.html">تعارف</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="search.html" class="icon-btn" aria-label="تلاش کریں">🔎 تلاش</a>
+      <button type="button" class="nav-toggle" aria-label="مینو کھولیں" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="موبائل مینو">
+    <ul>
+      <li><a href="index.html">ہوم</a></li>
+      <li><a href="syllabus.html">نصاب</a></li>
+      <li><a href="topics.html">تمام موضوعات</a></li>
+      <li><a href="mcqs.html">MCQs مشق</a></li>
+      <li><a href="short-questions.html">مختصر سوالات</a></li>
+      <li><a href="essay-questions.html">مقالہ سوالات</a></li>
+      <li><a href="revision.html">دہرائی کا مواد</a></li>
+      <li><a href="about.html">کورس کا تعارف</a></li>
+      <li><a href="search.html">تلاش</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" style="color:var(--color-gray-300);"><a href="index.html" style="color:var(--color-gold-light);">ہوم</a><span class="sep">/</span><span>MCQ مشق</span></nav>
+  <h1>کثیرالانتخابی سوالات (MCQs)</h1>
+  <p>موضوع اور سوالات کی تعداد منتخب کریں، موڈ چنیں اور مشق شروع کریں۔ تمام سوالات مصدقہ ماخذ دستاویزات سے لیے گئے ہیں۔</p>
+</div></div>
+<div class="container section">
+  <div class="quiz-shell" id="quiz-shell">
+    <div class="quiz-setup">
+      <div class="mode-toggle">
+        <button type="button" class="active" data-mode="practice">پریکٹس موڈ (فوری جواب)</button>
+        <button type="button" data-mode="exam">امتحان موڈ (آخر میں نتیجہ)</button>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <label for="quiz-topic" class="small text-muted">موضوع منتخب کریں</label>
+          <select id="quiz-topic" style="width:100%; padding:10px; border-radius:8px; border:1px solid var(--color-gray-300); font-family:inherit;">
+            <option value="all">تمام موضوعات</option>
+          </select>
+        </div>
+        <div>
+          <label for="quiz-count" class="small text-muted">سوالات کی تعداد</label>
+          <select id="quiz-count" style="width:100%; padding:10px; border-radius:8px; border:1px solid var(--color-gray-300); font-family:inherit;">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="quiz-start">مشق شروع کریں</button>
+    </div>
+    <div class="quiz-play hidden"></div>
+    <div class="quiz-result hidden"></div>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>اسلام اور سائنس</h4>
+        <p class="text-muted small">علم، تحقیق اور اسلامی فکر کی روشنی میں سائنس، کائنات، تاریخ اور جدید اخلاقی سوالات کا منظم اور متوازن مطالعہ۔ یہ ایک غیر منفعتی تعلیمی وسیلہ ہے۔</p>
+      </div>
+      <div>
+        <h4>مطالعہ</h4>
+        <ul>
+          <li><a href="syllabus.html">کورس نصاب</a></li>
+          <li><a href="topics.html">تمام موضوعات</a></li>
+          <li><a href="revision.html">دہرائی کا مواد</a></li>
+          <li><a href="about.html">کورس کا تعارف</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>مشق</h4>
+        <ul>
+          <li><a href="mcqs.html">کثیرالانتخابی سوالات</a></li>
+          <li><a href="short-questions.html">مختصر سوالات</a></li>
+          <li><a href="essay-questions.html">مقالہ سوالات</a></li>
+          <li><a href="search.html">تلاش</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>معلومات</h4>
+        <ul>
+          <li><a href="about.html">ماخذ دستاویزات</a></li>
+          <li><a href="sitemap.xml">سائٹ میپ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> اسلام اور سائنس — Islam &amp; Science Learning Hub۔ تمام تر مواد تعلیمی مقاصد کے لیے ہے۔</span>
+      <span>یہ ایک جامد (static) تعلیمی ویب سائٹ ہے۔</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/topics.js"></script>
+<script src="data/mcqs.js"></script>
+<script src="data/short-questions.js"></script>
+<script src="data/essay-questions.js"></script>
+<script src="data/revision.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/quiz.js"></script>
+
+</body>
+</html>
